@@ -4,7 +4,11 @@
 Converting Windows Events in XML format into XSLX format
 ---------------------------------------------------------
 
-Tool to convert evtxtract, evtxexport XML output to XSLX format for further forensics analysis.
+Tool to convert evtxtract, evtxexport XML output to XSLX format for further forensics analysis. xlsxwriter python library is needed, You can install it using pip 
+```
+pip install xlsxwriter
+
+```
 
 ```
 
