@@ -19,6 +19,18 @@ args = parser.parse_args()
 
 xmlEvtPath = args.input
 output = args.output
+#adding <Events> <\Events>
+xmlFile = open(xmlEvtPath, 'r')
+xmlContent = xmlFile.readlines()
+xmlFile.close()
+
+xmlContent.insert(0, '<Events>\n')
+xmlContent.insert(len(xmlContent), '\n</Events>')
+
+xmlFile = open(xmlEvtPath, 'w')
+xmlContent = ''.join(xmlContent)
+xmlFile.write(xmlContent)
+xmlFile.close()
 
 if args.debug:
 	print "[+] Parsing XML Event Log File"
